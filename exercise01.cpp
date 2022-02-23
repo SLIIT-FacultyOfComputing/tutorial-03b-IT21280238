@@ -5,10 +5,14 @@ using namespace std;
 int main() {
  float marks[] = {78.4, 90.6, 45.9, 72.2, 54.4};
  char names[][20] = {"Ajith", "Wimal", "Kanthi", "Suranji", "Kushmitha"};
- cout << " No " << " Name " << " Marks " << endl;
+ cout << setw(10) << setprecision(1) << " No " 
+      << setw(10) << setprecision(1) << " Name " 
+      << setw(10) << setprecision(1) << " Marks " << endl;
+cout << setiosflags(ios::fixed) << endl;
+  
  for (int r = 0; r < 5; r++) {
-     cout << setw(10) << setprecision(1) <<  r+1 
-          <<  names[r] 
-          << marks[r] << endl;
+     cout << setw(10) << setprecision(2) <<  r+1 
+          << setw(10)  << setprecision(2) << names[r] 
+          << setw(10) << setprecision(2) << marks[r] << endl;
  }
 }
